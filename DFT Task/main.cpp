@@ -44,7 +44,7 @@ class DFT
                     theta=(2*PI*i*j/N);
                     temp.real=round(cos(theta)*1e7)/1e7;
                         if(fabs(temp.real)==0){temp.real=0;}//handle -0
-                    temp.img=round(sin(theta)*1e7)/1e7;
+                    temp.img=-round(sin(theta)*1e7)/1e7;
                         if(fabs(temp.img)==0){temp.img=0;}//handle -0
                     row.push_back(temp);
 
@@ -60,7 +60,7 @@ class DFT
             for(int i=0;i<N;i++)
             {
                  for(int j=0;j<N;j++)
-                    cout<< w[i][j].real << ((w[i][j].img< 0) ? "+j" : "-j") << abs(w[i][j].img) << " " ;
+                    cout<< w[i][j].real << ((w[i][j].img >= 0) ? "+j" : "-j") << abs(w[i][j].img) << " " ;
                  cout <<"\n         ";
             }
             cout<<"\n";

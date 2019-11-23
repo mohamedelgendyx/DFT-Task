@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1574524476 source:e:\dft task\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<math.h>
+
